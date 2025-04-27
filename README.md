@@ -50,13 +50,13 @@ Symbols:
 
 
 # Known Issues & Required Fixes
-1.Covariance for Operation_Type
+## 1.Covariance for Operation_Type
 LLM uses "agg":"covariance", but group_by_aggregate only recognizes cov or corr.
-2.Rolling average placeholder and filtering
+## 2.Rolling average placeholder and filtering
 Placeholder {last_scalar} is skipped → column not created.
 select_rows filtering uses incorrect column name; actual name is rolling_avg_Processing_Time.
 Fix: Don’t insert {last_scalar} when no scalar exists; have ExecutionNode ignore unbound placeholders instead of throwing errors.
-3.Complex grouped aggregation
+## 3.Complex grouped aggregation
 Task: For each (Operation_Type, Machine_ID) pair, output job count and mean Energy_Consumption, keeping only groups with count ≥ 5.
 Failures:
 ①Grouped only by Operation_Type.
