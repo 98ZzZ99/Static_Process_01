@@ -24,7 +24,6 @@ One-shot execution: No mid-run replanning or persistent session DataFrame.
 Symbols:
 ✦ = DataFrame → DataFrame
 ■ = DataFrame → scalar
-## 🛠 Tool Functions
 | Name                         | Type | Description                                           | Example JSON                                                                                                 |
 |------------------------------|------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | `select_rows`                | ✦    | Filter rows by column condition (supports AND/OR)     | `{ "function":"select_rows", "args":{"column":"Processing_Time","condition":"<= 50"} }`                       |
